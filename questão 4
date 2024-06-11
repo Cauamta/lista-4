@@ -6,19 +6,20 @@ Matricula:2412130053
 */
 
 int main() {
-    char str1[100], str2[100];
+    int vetor[8];
+    int X, Y;
 
-    printf("Digite a primeira string: ");
-    scanf("%s", str1);
-
-    printf("Digite a segunda string: ");
-    scanf("%s", str2);
-
-    if (strstr(str1, str2) != NULL) {
-        printf("A segunda string está contida dentro da primeira.\n");
-    } else {
-        printf("A segunda string NÃO está contida dentro da primeira.\n");
+    for (int i = 0; i < 8; i++) {
+        printf("Digite o valor para a posição %d: ", i);
+        scanf("%d", &vetor[i]);
     }
+
+    printf("Digite o valor de X e Y: ");
+    scanf("%d %d", &X, &Y);
+
+    int soma = vetor[X] + vetor[Y];
+
+    printf("A soma dos valores nas posições X e Y é: %d\n", soma);
 
     return 0;
 }
