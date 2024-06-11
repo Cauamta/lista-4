@@ -1,4 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
+/*
+Aluno:cauã mata
+Matricula:2412130053
+*/
+
 
 int main() {
     int valores[6];
