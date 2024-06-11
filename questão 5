@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<stdlib.h>
+/*
+Aluno:cauã mata
+Matricula:2412130053
+*/
+
+
+int main() {
+    int vetor_a[6] = {1, 0, 5, -2, -5, 7};
+    
+    int soma = vetor_a[0] + vetor_a[1] + vetor_a[5];
+    printf("Soma dos valores: %d\n", soma);
+    
+    vetor_a[4] = 100;
+    
+    for (int i = 0; i < 6; i++) {
+        printf("%d\n", vetor_a[i]);
+    }
+    
+    return 0;
+}
