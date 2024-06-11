@@ -1,22 +1,33 @@
 #include <stdio.h>
-#include <stdlib.h>
-/*
-Aluno:cauã mata
-Matricula:2412130053
-*/
 
 int main() {
-    char input[100];
-    int length = 0;
+    int valores[6];
+    int i, escolha;
 
-    printf("Digite uma string: ");
-    scanf("%s", input);
-
-    while (input[length] != '\0') {
-        length++;
+    printf("Digite seis valores inteiros:\n");
+    for (i = 0; i < 6; i++) {
+        scanf("%d", &valores[i]);
     }
 
-    printf("Número de caracteres: %d\n", length);
+    printf("Escolha 1 para exibir na ordem de leitura ou 2 para exibir na ordem inversa:\n");
+    scanf("%d", &escolha);
+
+    switch(escolha) {
+        case 1:
+            printf("Valores na ordem de leitura:\n");
+            for (i = 0; i < 6; i++) {
+                printf("%d ", valores[i]);
+            }
+            break;
+        case 2:
+            printf("Valores na ordem inversa:\n");
+            for (i = 5; i >= 0; i--) {
+                printf("%d ", valores[i]);
+            }
+            break;
+        default:
+            printf("Escolha inválida!\n");
+    }
 
     return 0;
 }
